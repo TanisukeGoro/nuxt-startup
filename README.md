@@ -1,6 +1,8 @@
-# pair-code-editor
+# Nuxt kit
 
-> ペアコードのためのエディター
+> Nuxt Projectのスタートアップ
+
+## 
 
 ## Build Setup
 
