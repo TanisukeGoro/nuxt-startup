@@ -2,7 +2,26 @@
 
 > Nuxt Projectのスタートアップ
 
-## 
+開発していて良さそうだなと思った構成はこちらに追加していきたい
+
+## 対応項目
+
+- [x] Vuetify
+- [x] ダークモードを検知するplugin(./plugins/isDarkmode.js)を追加
+  - Useage : `this.$browserDarkmode()`で使える.
+  - 状態はLocalStorageに保存される.
+  - Vuetifyのテーマを変更する場合は以下ようにすればいい
+  ```js
+    mounted() {
+      this.$vuetify.theme.dark = this.$browserDarkmode()
+    },
+    methods: {
+      switchDarkmode() {
+        this.$vuetify.theme.dark = !this.$vuetify.theme.dark
+        localStorage.setItem('_darkmode', this.$vuetify.theme.dark)
+      }
+    }
+  ``` 
 
 ## Build Setup
 
